@@ -1,0 +1,143 @@
+#buttonsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+    flex-wrap: wrap; /* Para manejar el ancho de los botones */
+  }
+  
+  #botonCasa,
+  #botonEdificio,
+  #botonSalir,
+  #containerFormEdificio,
+  #containerForm {
+    margin: 5px; /* Margen alrededor de cada botón */
+  }
+
+  /* Estilos para los botones */
+  .custom-boton {
+    font-family: "Arial", sans-serif;
+    font-weight: 600;
+    color: #000000;
+    background-color: #00EB89;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button {
+    font-family: "Arial", sans-serif;
+    font-weight: 600;
+    color: #000000;
+    background-color: #ff6900;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.custom-boton:hover {
+    background-color: #009e6e;
+    color: #ffffff;
+}
+body {
+    background-color: #000;
+}
+/* Cambiar el color del texto a blanco en los formularios */
+form,
+label, h1 {
+    color: #fff; /* Cambiar el color del texto a blanco */
+    font-family: "Arial", sans-serif;
+}
+select {
+    text-rendering: auto;
+    color: fieldtext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    box-sizing: border-box;
+    align-items: center;
+    -webkit-rtl-ordering: logical;
+    background-color: field;
+    cursor: default;
+    margin: 0em;
+    white-space: pre;
+    border-width: 1px;
+    border-style: solid;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+    border-radius: 0px;
+}
+
+#botonCasa:active,
+#botonCasa:focus {
+    background-color: #ff6900;
+}
+
+/* Para el botón de edificio */
+#botonEdificio:active,
+#botonEdificio:focus {
+    background-color:#ff6900;
+}
+
+/* Para el botón de salir */
+#botonSalir:active,
+#botonSalir:focus {
+    background-color: #ff6900;
+}
+#casaFormulario,
+#edificioFormulario {
+    width: 50%; /* Establece el ancho deseado */
+    display: inline-block; /* Alinea en línea uno después del otro */
+    vertical-align: top; /* Alinea en la parte superior */
+    box-sizing: border-box; /* Considera el padding y el borde dentro del ancho */
+    padding: 20px; /* Agrega un poco de espacio alrededor */
+    margin: 10px; /* Espaciado entre los formularios */
+}
+
+#containerForm,
+#containerFormEdificio {
+    display: flex;
+    flex-direction: column;
+}
+
+#containerForm label,
+#containerFormEdificio label {
+    margin-bottom: 10px; /* Espacio entre elementos */
+}
+
+#containerForm select,
+#containerFormEdificio select {
+    margin-bottom: 15px; /* Espacio entre elementos */
+    width: calc(100% - 20px); /* Ancho del select, ajustable */
+}
+
+
+  
+  .image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  /* Estilos para los contenedores */
+.floor {
+    display: flex;
+    justify-content: space-between; /* Espacio entre los elementos */
+    margin-bottom: 30px; /* Espaciado entre cada conjunto de formulario e imagen */
+}
+
+.floor-formEdificio,.floor-form,
+.image-container {
+    width: 125%; /* Establecer el ancho de cada elemento */
+    /* Puedes ajustar el ancho según lo que necesites */
+    /* Otros estilos como padding, border, etc. */
+}

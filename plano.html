@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Procero_parte2</title>
+    <link rel="stylesheet" type ="text/css" href="plano.css">
+</head>
+<body>
+    <div id="buttonsContainer">
+        <button id="botonCasa" class="elementor-button custom-boton">Casa</button>
+        <button id="botonEdificio" class="elementor-button custom-boton">Edificio</button>
+    </div>
+    
+    <section id="casaFormulario" style="display: none;">
+        <h1>Formulario para Casa</h1>
+        <form>
+            <div>
+                <label for="num_pisos" onchange="cambiandoNroPisos" >Número de pisos:</label>
+                <input type="number" id="num_pisos" name="num_pisos" min="1" max="3">(1-3)
+                <br><br>
+
+                <label for="ancho">Ancho(m):</label>
+                <input type="number" id="ancho" name="ancho" min="4" max="20" oninput="validarAnchoLargo()">(4-20)
+                <br><br>
+
+                <label for="largo">Largo(m):</label>
+                <input type="number" id="largo" name="largo" min="5" max="20" oninput="validarAnchoLargo()">(5-20)
+                <br><br>
+
+                <label for="posicion_escalera">Selecciona la posicion de la escalera:</label>
+                <select id="posicion_escalera" name="posicion_escalera">
+                    <option value="adelante">Adelante</option>
+                    <option value="medio">Medio</option>
+                    <option value="fondo">Fondo</option>
+                </select>
+                <br><br>
+
+                <button id="MostrarOpciones" class="elementor-button custom-boton" onclick="mostrarOpciones(event)">Agregar más caracteristicas</button>
+                <div id="containerForm" class="floor-contairner"></div>
+                <!-- <input type="submit" value="Guardar"> -->
+        </form>  
+       
+    </section>
+    <section id="edificioFormulario" style="display: none;">
+        <h1>Formulario para Edificio</h1>
+        <form>
+            <div>
+                <label for="num_pisosEdificio" onchange="cambiandoNroPisosEdificio" >Número de pisos:</label>
+                <input type="number" id="num_pisosEdificio" name="num_pisos" min="1" max="5">(1-5)
+                <br><br>
+
+                <label for="anchoEdificio">Ancho(m):</label>
+                <input type="number" id="anchoEdificio" name="ancho" min="4" max="20" oninput="validarAnchoLargoEdificio()">(4-20)
+                <br><br>
+
+                <label for="largoEdificio">Largo(m):</label>
+                <input type="number" id="largoEdificio" name="largo" min="5" max="20" oninput="validarAnchoLargoEdificio()">(5-20)
+                <br><br>
+
+                <label for="posicion_escaleraEdificio">Selecciona la posicion de la escalera:</label>
+                <select id="posicion_escaleraEdificio" name="posicion_escalera">
+                    <option value="adelante">Adelante</option>
+                    <option value="medio">Medio</option>
+                    <option value="fondo">Fondo</option>
+                </select>
+                <br><br>
+
+                <button id="MostrarOpcionesEdificio" class="elementor-button custom-boton" onclick="mostrarOpcionesEdificio(event)">Agregar más caracteristicas</button>
+            <!-- <input type="submit" value="Guardar"> -->
+            <div id="containerFormEdificio" class="floor-contairner"></div>
+        </form>  
+        
+    </section>
+    <button id="botonSalir" class="elementor-button custom-boton">Salir</button>
+</body>
+<script src="plano.js"></script>
+</html>
